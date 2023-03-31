@@ -1,0 +1,23 @@
+import random
+no_of_digits=int(input('enter the number of digits (if single digit enter 0\n'))
+x=True
+score=0
+while x==True:
+ number1=random.randint(1,(10**no_of_digits))
+ print(number1)
+ number2=random.randint(1,(10**no_of_digits))
+ if number1<number2:
+  answer='higher'
+ else:
+  answer='lower'
+ print(number2)
+ user=input('do you think the next number is higher or lower\n')
+ print(number2)
+ if answer==user:
+  print('yes u are right\n')
+  score+=1
+  x=True
+ else:
+  print('ahh thats wrong!..\n')
+  x=False
+ print(f'score is {score}')
