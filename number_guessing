@@ -1,0 +1,35 @@
+#number guesssing
+
+import random
+print('chose a number berween 1 to 100')
+choice=random.randint(1,100)
+print(choice)
+level=input('choose the difficulty levl easy or hard\n')
+if level =='easy':
+ attempt=10
+else:
+ attempt=5
+ print(f"you have {attempt} attempts\n")
+def game():
+ global attempt,choice
+ user=int(input('enter your guess\n'))
+ if user<choice:
+   print('too low!')
+ elif user>choice:
+   print('too high')
+ else:
+  print('you are right!')
+  
+  attempt=0
+  return attempt
+
+ attempt-=1
+ return attempt
+for i in range(attempt):
+ attempt=game() 
+ if attempt>0:
+  print(f"you have {attempt} attempts left")
+  
+ else:
+  print(f'the number was {choice}')
+  break
